@@ -1,11 +1,11 @@
-# javascript-interview
+# Javascript Interview
 
 > ### Disclaimer
 > Этот репозиторий написан в первую очередь автором для самообразования и подготовку к собеседованиям. Если Вы найдёте какой-то недочёт в ответах, то можете сообщить об этом.
 
 ## Оглавление
 
-* [Javascript](#kotlin)
+* [Javascript](#Javascript)
 
 ### Javascript
 
