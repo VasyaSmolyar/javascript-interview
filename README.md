@@ -596,3 +596,28 @@
   console.log(arr)
   ```
 
+- #### Бинарный поиск
+
+  В отличие от линейного поиска, бинарный поиск использует отсортированный список. Для поиска значения вы сначала сравниваете значение со средним элементом списка. Если они равны, значение поиска найдено. Если значение поиска больше, чем средний элемент, выполняется поиск в верхней половине данных. Затем вы сравниваете средний элемент этого раздела со значением поиска. В качестве альтернативы, если элемент меньше среднего элемента, вы ищете в нижней половине списка и сравниваете его среднее значение. Список многократно делится пополам до тех пор, пока элемент не будет найден или не останется элементов для поиска.
+
+  ```jsx
+  function binarySearch(value, list) {
+      let first = 0;    //left endpoint 
+      let last = list.length - 1;   //right endpoint 
+      let position = -1;
+      let found = false;
+      let middle;
+      while (found === false && first <= last) {
+          middle = Math.floor((first + last)/2);
+          if (list[middle] == value) {
+              found = true;
+              position = middle;
+          } else if (list[middle] > value) {  //if in lower half 
+              last = middle - 1;
+          } else {  //in in upper half 
+              first = middle + 1;
+          }
+      }
+      return position;
+  }
+  ```
